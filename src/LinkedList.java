@@ -125,6 +125,20 @@ public class LinkedList<T> {
         temp.next=newnode;
     }
 
+    public void reverse(){
+        Node current = head;
+        Node prev = null;
+        Node next = head.next;
+        while(current!=null){
+            next=current.next;
+            current.next=prev;
+            prev=current;
+            current=next;
+
+        }
+        head=prev;
+    }
+
 
 
 
